@@ -1,0 +1,24 @@
+@charset "UTF-8";
+*{
+	padding: 0;
+	margin: 0;
+}
+
+#body{
+    background:  #7b8e31;
+}
+
+#header{
+    background: #b9cc6e;
+}
+
+#main{
+    background: #b9cc6e;
+}
+
+#footer{
+    height: 50px;
+    background: #24973e;
+}
+
+
