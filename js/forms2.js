@@ -2631,10 +2631,11 @@ function drawRemoveProduction() {
 
 function removeProduction() {
     var contenidoBorrar = this.value;
-	var excepcion = document.getElementById("excepcion");
+	var excepcion = document.getElementById("exception");
 	var boolean = false;
 
-	var producciones = video.productions;
+    var vs = videoSystem.getInstance();
+	var producciones = vs.productions;
 	var produccion = producciones.next();
 
 	while((produccion.done != true) && (!boolean)){
@@ -2680,14 +2681,14 @@ function removeProduction() {
 			}
 			boolean = true;
 		}
-		director = directores.next();
+		produccion = producciones.next();
 	}
 
     try {
         vs.removeProduction(prodBorrar);
         excepcion.innerHTML = "Production delete successfuly";
     } catch (error) {
-        excepcion.innerHTML = error.message;
+        excepcion.innerHTML = "Production delete unsuccessfuly";
     }
 }
 
